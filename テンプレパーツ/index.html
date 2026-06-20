@@ -1,0 +1,180 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>トップ｜中原クリニック</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet"><style>:root{
+  --green:#25af13; --sage:#699563; --green-d:#4f7e3f; --green-deep:#3f7a2a;
+  --cream:#f6f1e1; --cream-2:#fbf8ef; --panel:#ffffff;
+  --ink:#333333; --ink-soft:#6f6d64; --line:#e6e0cf;
+  --terra:#d36737; --num:#694b32; --yellow:#fcfeb8; --blue:#adbcd8;
+  --maxw:1200px; --radius:14px;
+  --shadow:0 6px 24px rgba(120,110,70,.08);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:"Zen Kaku Gothic New","Noto Sans JP",system-ui,sans-serif;
+  color:var(--ink); font-size:18px; line-height:1.85; letter-spacing:.03em;
+  background-color:var(--cream);
+  background-image:url(../public/assets/bg.png);
+  background-size:520px auto; background-repeat:repeat;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:500}
+strong{font-weight:700}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+/* ---------- header ---------- */
+header.wf-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(4px);border-bottom:1px solid var(--line)}
+.wf-header .row{display:flex;align-items:center;gap:22px;min-height:86px}
+.logo{display:flex;align-items:center;gap:8px}
+.logo .mark{width:54px;height:54px;border-radius:50%}
+.logo .name{font-family:"Zen Kaku Gothic New";font-weight:700;font-size:24px;color:var(--green);letter-spacing:.06em}
+.wf-nav{display:flex;gap:20px;flex:1;flex-wrap:wrap;justify-content:center;font-size:14.5px;color:var(--ink)}
+.wf-nav a span{padding:6px 2px;border-bottom:2px solid transparent;transition:.2s}
+.wf-nav a:hover span{color:var(--green-d);border-bottom-color:var(--green)}
+.wf-contact{text-align:right;font-size:12.5px;color:var(--ink-soft);min-width:180px}
+.wf-contact .tel{font-family:"Zen Kaku Gothic New";font-size:20px;color:var(--green);font-weight:700;letter-spacing:.04em}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(255,255,255,.5),rgba(246,241,225,.2));}
+.hero .inner{position:relative;display:flex;gap:34px;align-items:stretch;padding:48px 0 60px}
+.hero-copy{flex:0 0 41%;min-width:300px;display:flex;flex-direction:column}
+.hero h1{font-size:clamp(30px,3.2vw,44px);line-height:1.66;letter-spacing:.05em;font-weight:500;color:var(--ink);margin:0;text-shadow:0 1px 0 #fff}
+.hero .sub{color:var(--green-d);font-size:15px;margin-top:12px}
+.leaf-tl{position:absolute;top:-6px;left:-10px;width:340px;pointer-events:none;opacity:.95;z-index:2}
+.leaf-tr{position:absolute;top:-6px;right:-10px;width:300px;pointer-events:none;opacity:.95;z-index:2}
+.hero-media{flex:1;min-width:320px;display:flex}
+.xfade{position:relative;overflow:hidden;border-radius:14px;box-shadow:var(--shadow);background:#efe9d8}
+.xfade img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;animation:crossfade 12s infinite}
+.xfade img:nth-child(2){animation-delay:6s}
+@keyframes crossfade{0%{opacity:0}6%{opacity:1}44%{opacity:1}50%{opacity:0}100%{opacity:0}}
+.xfade-lg{flex:1;width:100%;min-height:560px}
+.hero-sm{margin-top:24px;width:100%;aspect-ratio:3/2}
+.hero-hours-inline{margin-top:auto;padding-top:22px;display:block;color:var(--ink)}
+
+/* ---------- sections ---------- */
+section.sec{padding:88px 0;position:relative}
+.sec-title{text-align:center;margin:0 0 6px;color:var(--ink);font-size:34px;font-weight:500;letter-spacing:.05em;line-height:1.3}
+.sec-title.ink{color:var(--ink)}
+.divider{display:block;margin:10px auto 30px;width:240px;opacity:.9}
+.lead{color:var(--ink-soft);font-size:15px;margin:0 0 26px;text-align:center}
+.grid{display:grid;gap:22px}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+.stack{display:flex;flex-direction:column;gap:12px}
+.center{text-align:center}
+.row-flex{display:flex;gap:26px;align-items:center;flex-wrap:wrap}
+.row-flex>*{flex:1;min-width:240px}
+
+/* circular dept icon */
+.dept-ico{width:90px;height:90px;min-width:90px;flex:none;aspect-ratio:1/1;object-fit:cover;border-radius:50%;margin:0 auto;box-shadow:var(--shadow);display:block}
+/* 困っていること */
+.trouble{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+.trouble-left{flex:1;min-width:260px}
+.trouble-head{display:inline-block;background:linear-gradient(transparent 60%,#dcecc6 60%);font-family:'Zen Kaku Gothic New';font-weight:700;color:var(--green-deep);font-size:17px;padding:0 4px;margin-bottom:10px}
+.trouble-icons{display:flex;gap:20px;flex:none;flex-wrap:wrap;justify-content:center}
+.ico-link{display:flex;flex-direction:column;align-items:center;gap:8px;width:118px;color:var(--green-d);font-size:12.5px;font-weight:700;text-align:center;line-height:1.4}
+.ico-link .dept-ico{width:90px;height:90px;min-width:90px}
+.dept-name{margin-top:10px;font-family:"Zen Kaku Gothic New";font-weight:700;color:var(--green-d)}
+
+/* numbered */
+.num{font-family:"Zen Kaku Gothic New";font-size:46px;color:var(--num);line-height:1;flex:none}
+
+/* band heading (緑帯) */
+.band{background:var(--sage);color:#fff;border-radius:10px;padding:13px 22px;font-family:"Zen Kaku Gothic New";font-weight:500;font-size:19px;letter-spacing:.04em;margin:0 0 24px}
+.subbar{border-left:5px solid var(--sage);padding-left:12px;color:var(--sage);font-weight:700;font-family:"Zen Kaku Gothic New";margin:20px 0 8px}
+.dotted{display:inline-block;border-bottom:3px dotted var(--terra);padding-bottom:6px}
+
+/* buttons (CSS pill, themed) */
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:12px 26px;font-size:14px;font-weight:700;font-family:"Zen Kaku Gothic New";border:2px solid var(--green);color:var(--green-d);background:#fff;box-shadow:var(--shadow);transition:.2s}
+.btn:hover{background:var(--green);color:#fff}
+.btn.solid{background:var(--green);color:#fff}
+.btn.solid:hover{background:var(--green-d)}
+.btn-img{display:inline-block}
+.btn-img{line-height:0}
+.btn-img img{display:inline-block;width:auto;height:auto;max-width:100%;vertical-align:middle}
+
+/* placeholders */
+.wf-img{border:1.5px dashed #c7bfa6;background:repeating-linear-gradient(45deg,#efe9d8 0 10px,#f6f1e3 10px 20px);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;color:#9a8f72;font-size:13px;text-align:center;padding:10px}
+.wf-box{border:1.5px dashed #c7bfa6;background:#fbf8ef;border-radius:var(--radius);display:flex;align-items:center;justify-content:center;text-align:center;color:#8d836a;font-size:13px;padding:14px;position:relative}
+.wf-tag{position:absolute;top:6px;left:8px;font-size:10px;color:#b3a988}
+.wf-label{font-size:12px;color:var(--ink-soft);letter-spacing:.02em}
+
+/* page head */
+.page-head{position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(255,255,255,.4),rgba(246,241,225,0));padding:64px 0 40px;text-align:center}
+.page-head h1{font-size:30px;color:var(--green-d);margin:0}
+.crumb{font-size:12px;color:var(--ink-soft);margin-bottom:6px}
+
+/* hours table */
+table.hours{border-collapse:collapse;width:100%;font-size:13px;background:#fff;border-radius:8px;overflow:hidden}
+table.hours th,table.hours td{border:1px solid var(--line);padding:9px;text-align:center;color:var(--ink-soft)}
+table.hours thead th{background:var(--cream);color:var(--green-d)}
+
+/* footer */
+footer.wf-footer{position:relative;background:rgba(255,255,255,.6);border-top:1px solid var(--line);padding:54px 0 0;margin-top:30px}
+.copy{background:var(--sage);color:#fff;text-align:center;font-size:12px;padding:16px;margin-top:44px}
+
+/* floating */
+.floating{position:fixed;right:18px;bottom:18px;z-index:60;width:96px;height:96px;border-radius:50%;
+  background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;
+  text-align:center;font-size:12.5px;font-weight:700;font-family:"Zen Kaku Gothic New";box-shadow:0 8px 20px rgba(80,120,40,.35);line-height:1.5}
+.pagetop{position:fixed;right:30px;bottom:128px;z-index:60;width:52px;height:52px;border-radius:50%;border:2px solid var(--green);background:#fff;display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--green-d);font-weight:700}
+
+ul.bul{margin:0;padding-left:1.1em;color:var(--ink-soft);font-size:14px}
+ul.bul li{margin:3px 0}
+
+@media(max-width:860px){
+  .g4{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:1fr}.g2{grid-template-columns:1fr}
+  .wf-header .row{flex-wrap:wrap;min-height:0;padding:12px 0}
+  .leaf-tl,.leaf-tr{width:180px}
+  .hero h1{font-size:28px}
+  .hero-hours{position:static;margin-top:24px;border-radius:14px}
+}
+
+/* ---- 仮写真 ---- */
+.ph{width:100%;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow);display:block;background:#efe9d8}
+.dept-ico,.mark{background:transparent}
+
+/* ---- スクロールアニメーション ---- */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* ヘッダー：スクロール時に影 */
+header.wf-header{transition:box-shadow .3s,background .3s}
+header.wf-header.scrolled{box-shadow:0 4px 18px rgba(120,110,70,.12)}
+
+/* 葉っぱのゆれ */
+@keyframes sway{0%,100%{transform:rotate(0)}50%{transform:rotate(1.5deg)}}
+.leaf-tl,.leaf-tr{transform-origin:top center;animation:sway 7s ease-in-out infinite}
+.leaf-tr{animation-duration:8s}
+.floating{transition:transform .2s}.floating:hover{transform:scale(1.06)}
+.ph,.dept-ico{transition:transform .3s}
+.card:hover .ph{transform:scale(1.02)}
+
+@media(max-width:860px){
+  .hero .inner{flex-direction:column;padding:36px 0 40px;gap:20px}
+  .hero-copy{flex:auto}
+  .xfade-lg{min-height:300px}
+}
+
+
+/* 実測サイズ反映 */
+.ph-portrait{width:283px;max-width:100%;aspect-ratio:283/360;object-fit:cover}
+.ph-reason{max-width:420px}
+.dept-card-ttl{font-size:16px}
+.gallery .ph{aspect-ratio:3/2;height:auto !important}
+</style><noscript><style>.reveal{opacity:1;transform:none}</style></noscript></head><body><header class="wf-header"><div class="container row">
+<a href="index.html" class="logo"><img class="mark" src="../public/assets/icons/leaf.png" alt=""><span class="name">中原クリニック</span></a>
+<nav class="wf-nav"><a href="menu.html"><span>診療内容</span></a><a href="special.html"><span>専門外来</span></a><a href="about.html"><span>クリニック案内</span></a><a href="staff.html"><span>院長紹介</span></a><a href="access.html"><span>交通アクセス</span></a><a href="first.html"><span>受診される方へ</span></a></nav>
+<div class="wf-contact">岐阜市浪花町2丁目15番地<br><span class="tel">☎ 058-254-1711</span></div></div></header><main><section class="hero"><img class="leaf-tl" src="../public/assets/leaf-tl.png" alt=""><img class="leaf-tr" src="../public/assets/leaf-tr.png" alt="">
+<div class="container inner"><div class="hero-copy"><h1>安心・信頼できる<br>あなたのまちの かかりつけ医</h1><p class="sub">専門の目と、地域の心で。岐阜のまちに暮らす、あなたと家族のために。</p><div class="xfade hero-sm"><img src="https://loremflickr.com/700/470/doctor?lock=13" alt="医師"><img src="https://loremflickr.com/700/470/medical,examination?lock=14" alt="施術の様子"></div><div class="hero-hours-inline"><table class="hours"><thead><tr><th>診療時間</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th><th>日</th></tr></thead><tbody><tr><td>9:00 - 12:00<br><span class="wf-label">(受付〜11:30)</span></td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>—</td></tr><tr><td>16:00 - 18:30<br><span class="wf-label">(受付〜18:00)</span></td><td>●</td><td>●</td><td>—</td><td>●</td><td>●</td><td>—</td><td>—</td></tr></tbody></table></div></div>
+<div class="hero-media"><div class="xfade xfade-lg"><img src="https://loremflickr.com/1000/900/clinic,building?lock=11" alt="クリニックの外観"><img src="https://loremflickr.com/1000/900/hospital,interior?lock=12" alt="院内の様子"></div></div></div></section><section class="sec reveal"><div class="container"><h2 class="sec-title">医院からのお知らせ</h2><img class="divider" src="../public/assets/divider.png" alt=""><div class="grid g2">
+<div class="card"><strong style="color:var(--green-d)">臨時休診のお知らせ</strong><p class="wf-label" style="margin:6px 0 0">日付＋本文（休診のご案内）</p></div>
+<div class="card"><strong style="color:var(--green-d)">オンライン診療をはじめました</strong><p class="wf-label" style="margin:6px 0 12px">curon(クロン)専用ページのご案内</p><span class="btn-img"><img src="../public/assets/btn/online.png" alt="オンライン診療はこちら"></span></div></div></div></section><section class="sec reveal"><div class="container"><div class="row-flex"><img class="ph ph-portrait" src="https://loremflickr.com/566/720/doctor?lock=20" alt="院長" style="flex:none"><div class="stack" style="flex:3"><h2 class="sec-title ink" style="text-align:left;margin:0">専門の目と、地域の心で</h2><p style="margin:0;color:var(--ink-soft);font-size:15px">消化器・肛門・乳腺を専門に、術後の経過観察から日常の不調まで。風邪や花粉症から乳がん検診まで幅広く診察します。</p><div class="row-flex" style="gap:12px"><span class="btn-img"><img src="../public/assets/btn/mammary-reserve.png" alt="乳腺外来を予約する"></span><span class="btn-img"><img src="../public/assets/btn/first.png" alt="初めての方へ"></span></div></div></div></div></section><section class="sec reveal"><div class="container"><h2 class="sec-title">からだの悩みに寄り添う 専門診療</h2><img class="divider" src="../public/assets/divider.png" alt=""><div class="grid g4"><div class="card center stack"><img class="dept-ico" src="../public/assets/icons/ribbon.png" alt=""><strong>乳腺外来</strong><span class="wf-label">胸のしこり・痛みなど、エコー中心の診療</span><div style="display:flex;justify-content:center"><span class="btn-img"><img src="../public/assets/btn/more.png" alt="詳しくはこちら"></span></div></div><div class="card center stack"><img class="dept-ico" src="../public/assets/icons/leaf.png" alt=""><strong>肛門科（痔外来）</strong><span class="wf-label">出血・痛みもプライバシーに配慮して診察</span><div style="display:flex;justify-content:center"><span class="btn-img"><img src="../public/assets/btn/more.png" alt="詳しくはこちら"></span></div></div><div class="card center stack"><img class="dept-ico" src="../public/assets/icons/heart.png" alt=""><strong>在宅診療</strong><span class="wf-label">通院が難しい方へ。緩和ケアにも対応</span><div style="display:flex;justify-content:center"><span class="btn-img"><img src="../public/assets/btn/more.png" alt="詳しくはこちら"></span></div></div><div class="card center stack"><img class="dept-ico" src="../public/assets/icons/stethoscope.png" alt=""><strong>胃カメラ</strong><span class="wf-label">鼻からの胃カメラで負担を抑えて検査</span><div style="display:flex;justify-content:center"><span class="btn-img"><img src="../public/assets/btn/more.png" alt="詳しくはこちら"></span></div></div></div></div></section><section class="sec reveal"><div class="container"><h2 class="sec-title">中原クリニックが 選ばれてきた理由</h2><img class="divider" src="../public/assets/divider.png" alt=""><div class="stack"><div class="card"><div class="row-flex" style="flex-direction:row"><div style="flex:none;width:100%;max-width:403px"><img class="ph" style="height:270px" src="https://loremflickr.com/900/600/doctor,patient?lock=31" alt="イラスト"></div><div class="stack"><div class="row-flex" style="gap:14px;align-items:center"><span class="num">01</span><h3 style="margin:0;font-size:20px;color:var(--ink);flex:5">外科医だからできる、全身サポート</h3></div><p style="margin:0;color:var(--ink-soft);font-size:14.5px">外科医としての長年の経験をいかし、術後管理から消化器・乳腺・肛門の専門領域、日常の体調不良まで幅広く対応します。</p></div></div></div><div class="card"><div class="row-flex" style="flex-direction:row-reverse"><div style="flex:none;width:100%;max-width:403px"><img class="ph" style="height:270px" src="https://loremflickr.com/900/600/doctor,patient?lock=32" alt="イラスト"></div><div class="stack"><div class="row-flex" style="gap:14px;align-items:center"><span class="num">02</span><h3 style="margin:0;font-size:20px;color:var(--ink);flex:5">通えなくても支え続ける、在宅診療</h3></div><p style="margin:0;color:var(--ink-soft);font-size:14.5px">外来通院が難しい方やご自宅での療養を希望される方へ、定期的に伺い診察・処方を行います。</p><div><span class="btn">在宅診療について ›</span></div></div></div></div><div class="card"><div class="row-flex" style="flex-direction:row"><div style="flex:none;width:100%;max-width:403px"><img class="ph" style="height:270px" src="https://loremflickr.com/900/600/doctor,patient?lock=33" alt="イラスト"></div><div class="stack"><div class="row-flex" style="gap:14px;align-items:center"><span class="num">03</span><h3 style="margin:0;font-size:20px;color:var(--ink);flex:5">安心の医療連携で、頼れるかかりつけ医</h3></div><p style="margin:0;color:var(--ink-soft);font-size:14.5px">地域の基幹病院と密に連携し、連携パスを用いた術後フォローなど切れ目のない医療提供に努めています。</p></div></div></div></div></div></section><section class="sec reveal"><div class="container"><h2 class="sec-title">困っていることは ありませんか？</h2><img class="divider" src="../public/assets/divider.png" alt=""><p class="lead">症状・お悩みから、ぴったりの診療科をご案内します</p><div class="stack"><div class="card"><div class="trouble"><div class="trouble-left"><div class="trouble-head">体調不良・身近なお悩み</div><ul class="bul"><li>風邪・発熱・のどの痛み</li><li>胃の痛み・胸やけ・検診の異常</li></ul></div><div class="trouble-icons"><span class="ico-link"><img class="dept-ico" src="../public/assets/icons/stethoscope.png" alt="">内科</span><span class="ico-link"><img class="dept-ico" src="../public/assets/icons/clipboard.png" alt="">消化器内科（胃カメラ）</span></div></div></div><div class="card"><div class="trouble"><div class="trouble-left"><div class="trouble-head">デリケートなお悩み</div><ul class="bul"><li>乳房のしこり・違和感・痛み</li><li>痔の症状（出血・痛み・違和感）</li></ul></div><div class="trouble-icons"><span class="ico-link"><img class="dept-ico" src="../public/assets/icons/ribbon.png" alt="">乳腺外来</span><span class="ico-link"><img class="dept-ico" src="../public/assets/icons/heart.png" alt="">肛門科</span></div></div></div><div class="card"><div class="trouble"><div class="trouble-left"><div class="trouble-head">ケガ・やけどをした</div><ul class="bul"><li>切り傷・すり傷・やけど など</li></ul></div><div class="trouble-icons"><span class="ico-link"><img class="dept-ico" src="../public/assets/icons/bandage.png" alt="">外科</span></div></div></div><div class="card"><div class="trouble"><div class="trouble-left"><div class="trouble-head">通院が難しい</div><ul class="bul"><li>訪問診療・ご自宅での療養</li></ul></div><div class="trouble-icons"><span class="ico-link"><img class="dept-ico" src="../public/assets/icons/heart.png" alt="">在宅診療</span></div></div></div><div class="card"><div class="trouble"><div class="trouble-left"><div class="trouble-head">健康を守りたい</div><ul class="bul"><li>予防接種・健康診断</li></ul></div><div class="trouble-icons"><span class="ico-link"><img class="dept-ico" src="../public/assets/icons/syringe.png" alt="">予防接種・健康診断</span></div></div></div></div></div></section><section class="sec reveal"><div class="container"><h2 class="sec-title">施設のご案内</h2><img class="divider" src="../public/assets/divider.png" alt=""><div class="grid g4 gallery"><img class="ph" style="height:180px" src="https://loremflickr.com/900/600/clinic,building?lock=8" alt="外観"><img class="ph" style="height:180px" src="https://loremflickr.com/900/600/hospital,room?lock=39" alt="処置室"><img class="ph" style="height:180px" src="https://loremflickr.com/900/600/hospital,reception?lock=8" alt="受付"><img class="ph" style="height:180px" src="https://loremflickr.com/900/600/doctor,office?lock=46" alt="診察室"></div><p class="wf-label center" style="margin-top:10px">※ 横並び（カルーセル）想定・写真はご用意分</p></div></section><section class="sec reveal"><div class="container"><h2 class="sec-title ink">更新情報</h2><img class="divider" src="../public/assets/divider.png" alt=""><div class="stack" style="max-width:760px;margin:0 auto"><div style="display:flex;gap:18px;align-items:center;border-bottom:1px dashed var(--line);padding:12px 4px"><span style="color:var(--terra);font-family:'Zen Kaku Gothic New';font-size:13px;flex:none">2026.0X.XX</span><span class="wf-label">お知らせ本文（1行）</span></div><div style="display:flex;gap:18px;align-items:center;border-bottom:1px dashed var(--line);padding:12px 4px"><span style="color:var(--terra);font-family:'Zen Kaku Gothic New';font-size:13px;flex:none">2026.0X.XX</span><span class="wf-label">お知らせ本文（1行）</span></div><div style="display:flex;gap:18px;align-items:center;border-bottom:1px dashed var(--line);padding:12px 4px"><span style="color:var(--terra);font-family:'Zen Kaku Gothic New';font-size:13px;flex:none">2026.0X.XX</span><span class="wf-label">お知らせ本文（1行）</span></div><div class="center" style="margin-top:16px"><span class="btn">過去の更新情報 ›</span></div></div></div></section></main><footer class="wf-footer"><div class="container"><div class="row-flex" style="align-items:flex-start">
+<div class="stack"><div class="logo"><img class="mark" src="../public/assets/icons/leaf.png" alt=""><span class="name">中原クリニック</span></div>
+<div class="wf-label">内科・外科・消化器内科・肛門外科・乳腺外科<br>リハビリテーション科・在宅医療</div>
+<div style="font-size:13px;color:var(--ink-soft)">〒500-8301 岐阜市浪花町2丁目15番地<br><span style="font-family:'Zen Kaku Gothic New';font-size:18px;color:var(--green-d);font-weight:700">☎ 058-254-1711</span></div>
+<span class="btn-img"><img src="../public/assets/btn/online.png" alt="オンライン診療はこちら"></span><table class="hours"><thead><tr><th>診療時間</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th><th>日</th></tr></thead><tbody><tr><td>9:00 - 12:00<br><span class="wf-label">(受付〜11:30)</span></td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>—</td></tr><tr><td>16:00 - 18:30<br><span class="wf-label">(受付〜18:00)</span></td><td>●</td><td>●</td><td>—</td><td>●</td><td>●</td><td>—</td><td>—</td></tr></tbody></table></div>
+<div class="stack"><div class="wf-box" style="min-height:220px"><span class="wf-tag">カレンダー</span>月間 休診カレンダー（休診／午後休診／その他の色分け・前後月送り）</div><div class="wf-img" style="min-height:200px"><span>🗺 Googleマップ 埋め込み<br><span class="wf-label">（地図）</span></span></div></div>
+</div></div><div class="copy">Copyright (c) 中原クリニック All Rights Reserved.</div></footer><div class="pagetop">PAGE<br>TOP</div><div class="floating">乳腺外来<br>WEB予約</div><script>document.addEventListener("DOMContentLoaded",function(){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}})},{threshold:0.12});document.querySelectorAll(".reveal").forEach(function(el){io.observe(el)});var hd=document.querySelector("header.wf-header");function s(){if(hd)hd.classList.toggle("scrolled",window.scrollY>10);}s();window.addEventListener("scroll",s,{passive:true});});</script></body></html>

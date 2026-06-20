@@ -1,5 +1,10 @@
 # iryonomitisirube-templates
 
+## Component dictionary
+
+Template parts are named in `docs/component-dictionary.md`.
+Machine-readable part metadata is in `src/data/componentCatalog.ts`.
+
 医院向けNext.jsテンプレートです。中原クリニックの完成済みサイト構成を参考に、文章・画像・電話番号・住所・診療時間を差し替えやすい形へ分割しています。
 
 ## 編集する場所

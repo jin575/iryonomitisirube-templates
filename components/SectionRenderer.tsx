@@ -30,7 +30,7 @@ export function SectionRenderer({ sections, site }: SectionRendererProps) {
               />
             );
           case 'message':
-            return <MessageSection key={section} message={site.message} />;
+            return <MessageSection key={section} message={site.message} tel={site.clinic.tel} />;
           case 'services':
             return (
               <ServicesSection
